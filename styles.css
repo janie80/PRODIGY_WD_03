@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('https://raw.githubusercontent.com/janie80/PRODIGY_WD_03/main/image_1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8f8f2;
+    animation: colorChange 10s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { background-color: rgba(40, 42, 54, 0.5); }
+    100% { background-color: rgba(40, 42, 54, 0.8); }
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stopwatch {
+    text-align: center;
+    background-color: #44475a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    font-size: 3em;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    font-size: 1em;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+#start {
+    background-color: #50fa7b;
+}
+
+#pause {
+    background-color: #ffb86c;
+}
+
+#reset {
+    background-color: #ff5555;
+}
+
+#lap {
+    background-color: #6272a4;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#laps {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #f8f8f2;
+    padding-top: 10px;
+}
+
+.lap-time {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .stopwatch {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #display {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+/* Themes */
+body.default { /* existing styles */ }
+body.dark {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+}
+body.light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#theme-selector {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
