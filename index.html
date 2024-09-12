@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome">
+        <h1>Welcome to Stopwatchie!</h1>
+    </div>
+    <div class="stopwatch">
+        <div id="display">00:00:00</div>
+        <button id="start"><i class="fas fa-play"></i></button>
+        <button id="pause"><i class="fas fa-pause"></i></button>
+        <button id="reset"><i class="fas fa-stop"></i></button>
+        <button id="lap"><i class="fas fa-flag-checkered"></i></button>
+        <div id="laps"></div>
+    </div>
+    <select id="theme-selector">
+        <option value="default">Default</option>
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
